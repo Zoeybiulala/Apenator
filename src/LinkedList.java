@@ -28,7 +28,7 @@ public class LinkedList {
 		header.setNext(trailer);
 		trailer.setPrev(header); //connect header and trailer because the list is empty
 		size =0;
-		entireList= new ArrayList<Name>();
+		entireList = new ArrayList<Primate>();
 	}
 	
 	/*	

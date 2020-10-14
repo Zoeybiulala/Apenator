@@ -73,7 +73,7 @@ public class Node{
 	 * returns the content of this node, which is of class Name
 	 */
 	public Primate getData() {
-		return name;
+		return primate;
 	}
 	/*
 	 * return a string of content of this node
