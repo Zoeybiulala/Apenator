@@ -14,6 +14,7 @@ public class Primate {
 	private boolean tail;
 	private boolean denCom;
 	private boolean groClaw;
+	private boolean sexualDimor;
 	private String spFeat;
 	
 	/**
@@ -33,25 +34,43 @@ public class Primate {
 	 * @param groClaw
 	 * @param spFeat
 	 */
-	public Primate(String name, String category, String bodySize, boolean postOrbClo, String ecto, int denFormu,
-			String actTime, String diet, String location, String color, String nostril, boolean tail, boolean denCom,
-			boolean groClaw, String spFeat) {
-		super();
-		this.name = name;
-		this.category = category;
-		this.bodySize = bodySize;
-		this.postOrbClo = postOrbClo;
-		this.ecto = ecto;
-		this.denFormu = denFormu;
-		this.actTime = actTime;
-		this.diet = diet;
-		this.location = location;
-		this.color = color;
-		this.nostril = nostril;
-		this.tail = tail;
-		this.denCom = denCom;
-		this.groClaw = groClaw;
-		this.spFeat = spFeat;
+	public Primate(String[] row) {
+		this.name = row[0];
+		this.category = row[1];
+		this.bodySize = row[2];
+		if (row[3].equals("0")) {
+			this.postOrbClo = false;
+		} else {
+			this.postOrbClo = true;
+		}
+		this.ecto = row[4];
+		this.denFormu = Integer.parseInt(row[5]);
+		this.actTime = row[6];
+		this.diet = row[7];
+		this.location = row[8];
+		this.color = row[9];
+		this.nostril = row[10];
+		if(row[11].equals("0")) {
+			this.tail = false;
+		} else {
+			this.tail = true;
+		}
+		if(row[12].equals("0")) {
+			this.denCom = false;
+		} else {
+			this.denCom = true;
+		}
+		if(row[13].equals("0")) {
+			this.groClaw = false;
+		} else {
+			this.groClaw = true;
+		}
+		if(row[14].equals("0")) {
+			this.sexualDimor = false;
+		} else {
+			this.sexualDimor = true;
+		}
+		this.spFeat = row[15];
 	}
 	/**
 	 * @return the name
@@ -226,6 +245,18 @@ public class Primate {
 		this.groClaw = groClaw;
 	}
 	/**
+	 * @return the sexualDimor
+	 */
+	public boolean isSexualDimor() {
+		return sexualDimor;
+	}
+	/**
+	 * @param sexualDimor the sexualDimor to set
+	 */
+	public void setSexualDimor(boolean sexualDimor) {
+		this.sexualDimor = sexualDimor;
+	}
+	/**
 	 * @return the spFeat
 	 */
 	public String getSpFeat() {
@@ -236,6 +267,24 @@ public class Primate {
 	 */
 	public void setSpFeat(String spFeat) {
 		this.spFeat = spFeat;
+	}
+	
+	
+	public String toString() {
+		return (name != null ? "name=" + name + ", " : "") +"\n"
+				+ (category != null ? "category=" + category + ", " : "")+"\n"
+				+ (bodySize != null ? "bodySize=" + bodySize + ", " : "") 
+				+"\n"+"postOrbClo=" +"\n"+ postOrbClo + ", "+"\n"
+				+ (ecto != null ? "ecto=" + ecto + ", " : "") +"\n"
+				+ "denFormu=" + denFormu + ", "
+				+ (actTime != null ? "actTime=" + actTime + ", " : "") +"\n"
+				+ (diet != null ? "diet=" + diet + ", " : "")+"\n"
+				+ (location != null ? "location=" + location + ", " : "")+"\n"
+				+ (color != null ? "color=" + color + ", " : "") +"\n"
+				+ (nostril != null ? "nostril=" + nostril + ", " : "")
+				+ "tail=" + tail + ", denCom=" + denCom + ", groClaw=" + groClaw + ", "
+				+"\n"
+				+ (spFeat != null ? "spFeat=" + spFeat : "");
 	}
 	
 	
