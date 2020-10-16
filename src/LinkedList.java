@@ -8,13 +8,13 @@ import java.util.ArrayList;
  * It can create an alphabeticallyy ordered list and have functions of printing
  * primate in alphabetical order and so on
  */
-
 public class LinkedList {
 	
 	private Node header;
 	private Node trailer; //two sentinels
 	private int size;
 	private ArrayList<Primate> entireList; //store unsorted list
+	
 	//end of instances field
  	
 	/* 
@@ -28,8 +28,20 @@ public class LinkedList {
 		trailer.setPrev(header); //connect header and trailer because the list is empty
 		size =0;
 		entireList = new ArrayList<Primate>();
+
 	}
-	
+	/**
+	 * @return the header
+	 */
+	public Node getHeader() {
+		return header;
+	}
+	/**
+	 * @return the trailer
+	 */
+	public Node getTrailer() {
+		return trailer;
+	}
 	/*	
 	 * @returns the number of elements in the linked list.
 	 */
@@ -132,6 +144,7 @@ public class LinkedList {
 		}	
 	}
 	
+	
 	/*
 	 * returns string of alphabetically ordered linked list
 	 * for testing purpose
@@ -145,6 +158,22 @@ public class LinkedList {
 		}
 		return s;
 	}
+	/*
+	 * returns string of alphabetically ordered linked list
+	 * for testing purpose but only name not all the info
+	 */
+	public String toString2() {
+		Node curr = header.next();
+		String s= curr.getData().toString();
+		while(curr.next().next()!=null) {
+			s += ", \n" + curr.next().getData().toString() ;
+			curr = curr.next();
+		}
+		return s;
+	}
+	
+	
+	
 	
 
 }

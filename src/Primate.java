@@ -10,12 +10,14 @@ public class Primate {
 	private String diet;
 	private String location;
 	private String color;
+	private String loco;
 	private String nostril;
 	private boolean tail;
 	private boolean denCom;
 	private boolean groClaw;
 	private boolean sexualDimor;
 	private String spFeat;
+	private String[] traits; 
 	
 	/**
 	 * @param name
@@ -49,29 +51,33 @@ public class Primate {
 		this.diet = row[7];
 		this.location = row[8];
 		this.color = row[9];
-		this.nostril = row[10];
-		if(row[11].equals("0")) {
+		this.loco = row[10];
+		this.nostril = row[11];
+		if(row[12].equals("0")) {
 			this.tail = false;
 		} else {
 			this.tail = true;
 		}
-		if(row[12].equals("0")) {
+		if(row[13].equals("0")) {
 			this.denCom = false;
 		} else {
 			this.denCom = true;
 		}
-		if(row[13].equals("0")) {
+		if(row[14].equals("0")) {
 			this.groClaw = false;
 		} else {
 			this.groClaw = true;
 		}
-		if(row[14].equals("0")) {
+		if(row[15].equals("0")) {
 			this.sexualDimor = false;
 		} else {
 			this.sexualDimor = true;
 		}
-		this.spFeat = row[15];
+		this.spFeat = row[16];
+		
 	}
+	
+	
 	/**
 	 * @return the name
 	 */
@@ -197,6 +203,18 @@ public class Primate {
 	 */
 
 	/**
+	 * @return the loco
+	 */
+	public String getLoco() {
+		return loco;
+	}
+	/**
+	 * @param loco the loco to set
+	 */
+	public void setLoco(String loco) {
+		this.loco = loco;
+	}
+	/**
 	 * @return the nostril
 	 */
 	public String getNostril() {
@@ -271,20 +289,23 @@ public class Primate {
 	
 	
 	public String toString() {
-		return (name != null ? "name=" + name + ", " : "") +"\n"
-				+ (category != null ? "category=" + category + ", " : "")+"\n"
-				+ (bodySize != null ? "bodySize=" + bodySize + ", " : "") 
-				+"\n"+"postOrbClo=" +"\n"+ postOrbClo + ", "+"\n"
-				+ (ecto != null ? "ecto=" + ecto + ", " : "") +"\n"
-				+ "denFormu=" + denFormu + ", "
-				+ (actTime != null ? "actTime=" + actTime + ", " : "") +"\n"
-				+ (diet != null ? "diet=" + diet + ", " : "")+"\n"
-				+ (location != null ? "location=" + location + ", " : "")+"\n"
-				+ (color != null ? "color=" + color + ", " : "") +"\n"
-				+ (nostril != null ? "nostril=" + nostril + ", " : "")
-				+ "tail=" + tail + ", denCom=" + denCom + ", groClaw=" + groClaw + ", "
+		return (name != null ? "Name: " + name + ", " : "") +"\n"
+				+ (category != null ? "Category: " + category + ", " : "")+"\n"
+				+ (bodySize != null ? "Body Size: " + bodySize + ", " : "") 
+				+"\n"+"Post-orbital Closure: " + postOrbClo + ", "+"\n"
+				+ (ecto != null ? "Ectotympanic: " + ecto + ", " : "") +"\n"
+				+ "Dental Formula: " + denFormu + ","+ "\n"
+				+ (actTime != null ? "Act Time: " + actTime + ", " : "") +"\n"
+				+ (diet != null ? "Diet: " + diet + ", " : "")+"\n"
+				+ (location != null ? "Location: " + location + ", " : "")+"\n"
+				+ (color != null ? "Color: " + color + ", " : "") +"\n"
+				+ (loco != null ? "Locomotion: " + loco + "," : "") +"\n"
+				+ (nostril != null ? "Nostril=" + nostril + ", " : "")+"\n"
+				+ "Tail=" + tail + ","+ "\n"
+				+"Dental Comb=" + denCom + "\n"
+				+"Grooming Claw=" + groClaw + ", "
 				+"\n"
-				+ (spFeat != null ? "spFeat=" + spFeat : "");
+				+ (spFeat != null ? "Special Features=" + spFeat : "")+"\n";
 	}
 	
 	

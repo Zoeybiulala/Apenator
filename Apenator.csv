@@ -1,22 +1,22 @@
-Name,category,BodySize,PostOrbClo,Ecto,DenFormu,ActTime,Diet,Location,Color,locomotion,Nostril,Tail,DenCom,GroCla,sexual dimorphism,SpeFeat,,
-Lemur,strepsirrhine,small,0,ring,2133,nocturnal and diurnal,vary,Africa,vary,leaper/arboreal,sideway,1,1,1,0,None,,
-Tarsier,haplorrhine,small,1,ring,2133,nocturnal,carnivorous,SE Asia,vary,leaper/arboreal,sideway,1,0,1,0,Have big eyes,,
-Spider Monkey,haplorrhine platyrrhini,medium,1,ring,2133,diurnal,frugivorous,Central America,vary,brachiator/arboreal,sideway,1,0,0,0,None,,
-Squirrel Monkey,haplorrhine platyrrhini,medium,1,ring,2133,diurnal,omnivorous,America,black,brachiator/arboreal,sideway,1,0,0,0,None,,
-Capuchin,haplorrhine platyrrhini,medium,1,ring,2133,diurnal,omnivorous,Central and South America,black-white,brachiator/arboreal,sideway,1,0,0,0,Appear in TV,,
-Uakari,haplorrhine platyrrhini,medium-large,1,ring,2133,diurnal,frugivorous,Amazon River,bloned-red,brachiator/arboreal,sideway,1,0,0,1,have red face,,
-Tamarins,haplorrhine platyrrhini,small,1,ring,2133,diurnal,omnivorous,Central and South America,black-white,leaper/arboreal,sideway,1,0,0,0,is polyyandrous,,
-Howler Monkey,haplorrhine platyrrhini,medium,1,ring,2133,diurnal,folivorous,Central and South America,vary,brachiator/arboreal,sideway,1,0,0,0,howler,,
-Orangutan,cattlarrhine platyrrhini,medium-large,1,tube,2123,diurnal,frugivorous,SE Asia,orange,brachiator/arboreal,down,0,0,0,1,None,,
-Gorilla,cattlarrhine platyrrhini,large,1,tube,2123,diurnal,hebivorous,Africa,vary,knucke-walking/quadrupedal,down,0,0,0,1,None,,
-Chimpanzee,cattlarrhine platyrrhini,medium-large,1,tube,2123,diurnal,omnivorous,Africa,black,arboreal and terrestrial/quadrupedally and brachiator,down,0,0,0,1,humans' the closest loving relative,,
-Human,cattlarrhine platyrrhini,large,1,tube,2123,cathemeral,omnivorous,various,vary,bipedal/terrestrial,down,0,0,0,1,None,,
-Bonobo,cattlarrhine platyrrhini,medium-large,1,tube,2123,diurnal,omnivorous,Africa,black,knucke-walking/quadrupedal,down,0,0,0,1,None,,
-Gibbon,cattlarrhine platyrrhini,medium,1,tube,2123,diurnal,frugivorous,SE Asia,vary,brachiator/arboreal,down,0,0,0,1,None,,
-Gelada,cattlarrhine platyrrhini,medium-large,1,tube,2123,diurnal,graminivorous,Africa,brown,quadrupedal/terrestrial,down,1,0,0,1,None,,
-Langur,cattlarrhine platyrrhini,medium,1,tube,2123,diurnal,folivorous,Africa and Asia,vary,quadrupedal/abroreal,down,0,0,0,1,None,,
-Guenon,cattlarrhine platyrrhini,medium,1,tube,2123,diurnal,unknown,Africa,vary,quadrupedal/abroreal,down,1,0,0,1,None,,
-Macaque,cattlarrhine platyrrhini,small,1,tube,2123,diurnal,frugivorous,Africa and Asia and North America,brown,brachiator/abroreal,down,1,0,0,1,be considered to be a invasice species,,
-Colobus,cattlarrhine platyrrhini,medium,1,tube,2123,diurnal,herbicorous,Africa,black-white,abroreal,down,1,0,0,1,None,,
-Loris,strepsirrhine,small,0,ring,2133,diurnal,omnivorous,SE Asia,gray-brown,leaper/arboreal,sideway,0,1,1,0,None,,
-Galago,strepsirrhine,small,0,ring,2133,nocturnal,omnivorous,Asia,brown,leaper/arboreal,sideway,1,1,1,0,None,,
+Name,category,BodySize,PostOrbClo,Ecto,DenFormu,ActTime,Diet,Location,Color,locomotion,Nostril,Tail,DenCom,GroCla,sexual dimorphism,SpeFeat
+Lemur,Strepsirrhine,small,0,ring,2133,nocturnal and diurnal,vary,Africa,vary,leaper/arboreal,sideway,1,1,1,0,None
+Tarsier,Haplorrhine,small,1,ring,2133,nocturnal,carnivorous,SE Asia,vary,leaper/arboreal,sideway,1,0,1,0,Have big eyes
+Spider Monkey,NWM,medium,1,ring,2133,diurnal,frugivorous,Central America,vary,brachiator/arboreal,sideway,1,0,0,0,None
+Squirrel Monkey,NWM,medium,1,ring,2133,diurnal,omnivorous,America,black,brachiator/arboreal,sideway,1,0,0,0,None
+Capuchin,NWM,medium,1,ring,2133,diurnal,omnivorous,Central and South America,black-white,brachiator/arboreal,sideway,1,0,0,0,Appear in TV
+Uakari,NWM,medium-large,1,ring,2133,diurnal,frugivorous,Amazon River,bloned-red,brachiator/arboreal,sideway,1,0,0,1,have red face
+Tamarins,NWM,small,1,ring,2133,diurnal,omnivorous,Central and South America,black-white,leaper/arboreal,sideway,1,0,0,0,is polyyandrous
+Howler Monkey,NWM,medium,1,ring,2133,diurnal,folivorous,Central and South America,vary,brachiator/arboreal,sideway,1,0,0,0,howler
+Orangutan,OWM,medium-large,1,tube,2123,diurnal,frugivorous,SE Asia,orange,brachiator/arboreal,down,0,0,0,1,None
+Gorilla,OWM,large,1,tube,2123,diurnal,hebivorous,Africa,vary,knucke-walking/quadrupedal,down,0,0,0,1,None
+Chimpanzee,OWM,medium-large,1,tube,2123,diurnal,omnivorous,Africa,black,arboreal and terrestrial/quadrupedally and brachiator,down,0,0,0,1,humans' the closest loving relative
+Human,OWM,large,1,tube,2123,cathemeral,omnivorous,various,vary,bipedal/terrestrial,down,0,0,0,1,None
+Bonobo,OWM,medium-large,1,tube,2123,diurnal,omnivorous,Africa,black,knucke-walking/quadrupedal,down,0,0,0,1,None
+Gibbon,OWM,medium,1,tube,2123,diurnal,frugivorous,SE Asia,vary,brachiator/arboreal,down,0,0,0,1,None
+Gelada,OWM,medium-large,1,tube,2123,diurnal,graminivorous,Africa,brown,quadrupedal/terrestrial,down,1,0,0,1,None
+Langur,OWM,medium,1,tube,2123,diurnal,folivorous,Africa and Asia,vary,quadrupedal/abroreal,down,0,0,0,1,None
+Guenon,OWM,medium,1,tube,2123,diurnal,unknown,Africa,vary,quadrupedal/abroreal,down,1,0,0,1,None
+Macaque,OWM,small,1,tube,2123,diurnal,frugivorous,Africa and Asia and North America,brown,brachiator/abroreal,down,1,0,0,1,be considered to be a invasice species
+Colobus,OWM,medium,1,tube,2123,diurnal,herbicorous,Africa,black-white,abroreal,down,1,0,0,1,None
+Loris,Strepsirrhine,small,0,ring,2133,diurnal,omnivorous,SE Asia,gray-brown,leaper/arboreal,sideway,0,1,1,0,None
+Galago,Strepsirrhine,small,0,ring,2133,nocturnal,omnivorous,Asia,brown,leaper/arboreal,sideway,1,1,1,0,None
