@@ -34,28 +34,27 @@ public class main {
 		    
 		    Scanner input = new Scanner(System.in);
 		    openQ(input,primates);
-		    
-		    ArrayList<String> pastQ = new ArrayList<String>();
-		    int i=0;
-		    pastQ.add(askRanQ(primates));
-		    while(pastQ.size() <14) {
-		    	for(int j=0;j<i;j++) {
-		    		if(pastQ.get(i).equals(pastQ.get(j))){
-		    			pastQ.set(i,askRanQ(primates));
-		    			j=0;
-		    		}
+		    boolean positive;
+		    int[] queOrder = queOrder();
+		    int[] traitOrder = copy(queOrder);
+		    String trait="";
+		    for(int i=0;i<13;i++) {
+		    	System.out.println(askRanQ(primates,queOrder[i]));
+		    	trait = returnTrait(primates,traitOrder[i]);
+		    	System.out.println("Press 1 for yes, 2 for no");
+		    	//TODO:answer and Deduplicate
+		    	positive = answer(input);
+		    	if(positive) {
+		    		primates.delYes(trait);
+		    	} else {
+		    		primates.delNo(trait); 
 		    	}
-		    	i++;
 		    }
 		    
-		    //TODO:answer
-		  
 		    
 		    
-		    
-		    
-		    //System.out.println(primates.toString());
-		    
+			  
+			    
 		    
 	}
 	
@@ -79,66 +78,24 @@ public class main {
 	}
 	
 	
-	public static String askRanQ(LinkedList primates) {
-		String[] traits = new String[13];
-		traits[0]="Post-orbital closure";
-		traits[1]="Ectotympanic";
-		traits[2]="Dental formula";
-		traits[3]="Act time";
-		traits[4]="Diet";
-		traits[5]="Location";
-		traits[6]="Color";
-		traits[7]="Locomotion";
-		traits[8]="Nostril";
-		traits[9]="Tail";
-		traits[10]="Dental Com";
-		traits[11]="Grooming claw";
-		traits[12]="Sexual dimorphism";
-		int i = (int)(Math.random()*13);
-		String s ="Is your primate: " + traits[i]+"=";
+	public static String askRanQ(LinkedList primates,int i) {
 		Primate p = primates.getHeader().next().getData();
-		switch (i) {
-		case 0:
-			s+= p.isPostOrbClo();
-			break;
-		case 1:
-			s+= p.getEcto();
-			break;
-		case 2:
-			s+= p.getDenFormu();
-			break;
-		case 3:
-			s+= p.getActTime();
-		case 4:
-			s+= p.getDiet();
-			break;
-		case 5:
-			s+= p.getLocation();
-			break;
-		case 6:
-			s+= p.getColor();
-			break;
-		case 7:
-			s+= p.getLoco();
-			break;
-		case 8:
-			s+= p.getNostril();
-			break;
-		case 9:
-			s+= p.isTail();
-			break;
-		case 10:
-			s+= p.isDenCom();
-			break;
-		case 11:
-			s+= p.isGroClaw();
-			break;
-		case 12:
-			s+= p.isSexualDimor();
-			break;
-
-		}
-		return s+"?";
+		String[] traits = new String[13];
+		traits[0]="Does your primate have Post-orbital closure?";
+		traits[1]="Is your primate Ectotympanic area" +p.getEcto()+ "-like?";
+		traits[2]="Is your primate Dental formula= "+p.getDenFormu()+"?";
+		traits[3]="Is your primate "+p.getActTime()+"?";
+		traits[4]="Is your primate "+p.getDiet()+"?";
+		traits[5]="Does your primate live in "+p.getLocation()+"?";
+		traits[6]="Is your primate "+p.getColor()+"?";
+		traits[7]="Is your primate "+ p.getLoco()+"?";
+		traits[8]="Is your primate's nostril "+p.getNostril()+" facing?";
+		traits[9]="Does your primate have a tail?";
+		traits[10]="Does your primate have dental comb?";
+		traits[11]="Does your primate have grooming claws";
+		traits[12]="is your primate sexual dimorphic?";
+		return traits[i];
+		
 	}
 	
 	public static boolean answer(Scanner input) {
@@ -150,9 +107,45 @@ public class main {
 		}
 	}
 	
+	public static int[] queOrder() {
+		Random randNum = new Random();
+	    Set<Integer>set = new LinkedHashSet<Integer>();
+	    while (set.size() < 13) {
+	    	set.add(randNum.nextInt(13));
+	    }
+	    int[] queOrder = new int[13];
+	    int i=0;
+        for (int x : set) 
+            queOrder[i++] = x; 
+        return queOrder;
+	}
 	
+	public static int[] copy(int[] o) {
+		int[] d = new int[o.length];
+		for(int i=0;i<o.length;i++) {
+			d[i] = o[i];
+		}
+		return d;
+	}
 	
-
+	public static String returnTrait(LinkedList primates,int i) {
+		Primate p = primates.getHeader().next().getData();
+		String[] traits = new String[13];
+		traits[0]=String.valueOf(p.isPostOrbClo());
+		traits[1]=p.getEcto();
+		traits[2]=String.valueOf(p.getDenFormu());
+		traits[3]=p.getActTime();
+		traits[4]=p.getDiet();
+		traits[5]=p.getLocation();
+		traits[6]=p.getColor();
+		traits[7]=p.getLoco();
+		traits[8]=p.getNostril();
+		traits[9]=String.valueOf(p.isTail());
+		traits[10]=String.valueOf(p.isDenCom());
+		traits[11]=String.valueOf(p.isGroClaw());
+		traits[12]=String.valueOf(p.isSexualDimor());
+		return traits[i];
+	}
 	
 	
 	

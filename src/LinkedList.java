@@ -114,6 +114,33 @@ public class LinkedList {
 		size++;//update the size of the list
 	}
 	
+	public void delNo(String trait) {
+		Node curr = header.next();
+		boolean flag = false;
+		while(curr != trailer){ 
+			flag = curr.toString().contains(trait);
+			curr = curr.next();
+			if(flag) {
+				curr.setPrev(curr.prev().prev());
+				curr.prev().setNext(curr);
+			}
+		} //walking process and test if find the same traits
+		
+	}
+	
+	public void delYes(String trait) {
+		Node curr = header.next();
+		boolean flag = true;
+		while(curr != trailer){ 
+			flag = curr.toString().contains(trait);
+			curr = curr.next();
+			if(!flag) {
+				curr.setPrev(curr.prev().prev());
+				curr.prev().setNext(curr);
+			}
+		} //walking process and test if find the same traits
+	}
+	
 	/*
 	 * @param target is the content of new Node that is going to be add to the list
 	 * this method will create an unordered arrayList of all names of all years
