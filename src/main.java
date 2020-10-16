@@ -35,8 +35,19 @@ public class main {
 		    Scanner input = new Scanner(System.in);
 		    openQ(input,primates);
 		    
-		    System.out.println(askRanQ(primates));
-		    System.out.println(askRanQ(primates));
+		    ArrayList<String> pastQ = new ArrayList<String>();
+		    int i=0;
+		    pastQ.add(askRanQ(primates));
+		    while(pastQ.size() <14) {
+		    	for(int j=0;j<i;j++) {
+		    		if(pastQ.get(i).equals(pastQ.get(j))){
+		    			pastQ.set(i,askRanQ(primates));
+		    			j=0;
+		    		}
+		    	}
+		    	i++;
+		    }
+		    
 		    //TODO:answer
 		  
 		    
@@ -130,7 +141,14 @@ public class main {
 		return s+"?";
 	}
 	
-	
+	public static boolean answer(Scanner input) {
+		int ans = Integer.parseInt(input.nextLine());
+		if(ans==1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
 	
 	
