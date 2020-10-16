@@ -36,12 +36,7 @@ public class LinkedList {
 	public Node getHeader() {
 		return header;
 	}
-	/**
-	 * @return the trailer
-	 */
-	public Node getTrailer() {
-		return trailer;
-	}
+
 	/*	
 	 * @returns the number of elements in the linked list.
 	 */

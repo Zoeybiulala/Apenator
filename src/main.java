@@ -36,6 +36,7 @@ public class main {
 		    openQ(input,primates);
 		    
 		    System.out.println(askRanQ(primates));
+		    System.out.println(askRanQ(primates));
 		    //TODO:answer
 		  
 		    

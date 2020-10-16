@@ -16,8 +16,7 @@ public class Primate {
 	private boolean denCom;
 	private boolean groClaw;
 	private boolean sexualDimor;
-	private String spFeat;
-	private String[] traits; 
+	private String spFeat; 
 	
 	/**
 	 * @param name
