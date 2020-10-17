@@ -46,14 +46,18 @@ public class main {
 		    	positive = answer(input);
 		    	if(positive) {
 		    		primates.delYes(trait);
+		    		
 		    	} else {
 		    		primates.delNo(trait); 
+		    		
+		    	}
+		    	System.out.println(primates.size());
+	    		System.out.println(primates.toString());
+		    	if(primates.size()==1) {
+		    		break;
 		    	}
 		    }
 		    
-		    
-		    
-			  
 			    
 		    
 	}
@@ -82,12 +86,12 @@ public class main {
 		Primate p = primates.getHeader().next().getData();
 		String[] traits = new String[13];
 		traits[0]="Does your primate have Post-orbital closure?";
-		traits[1]="Is your primate Ectotympanic area" +p.getEcto()+ "-like?";
+		traits[1]="Is your primate Ectotympanic area " +p.getEcto()+ "-like?";
 		traits[2]="Is your primate Dental formula= "+p.getDenFormu()+"?";
 		traits[3]="Is your primate "+p.getActTime()+"?";
 		traits[4]="Is your primate "+p.getDiet()+"?";
 		traits[5]="Does your primate live in "+p.getLocation()+"?";
-		traits[6]="Is your primate "+p.getColor()+"?";
+		traits[6]="Is your primate "+p.getColor()+"color?";
 		traits[7]="Is your primate "+ p.getLoco()+"?";
 		traits[8]="Is your primate's nostril "+p.getNostril()+" facing?";
 		traits[9]="Does your primate have a tail?";

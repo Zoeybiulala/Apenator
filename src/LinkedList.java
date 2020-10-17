@@ -41,7 +41,13 @@ public class LinkedList {
 	 * @returns the number of elements in the linked list.
 	 */
 	public int size() { 
-		return size; 
+		Node curr = header.next();
+		int count = 0;
+		while(curr!=trailer) {
+			count++;
+			curr = curr.next();
+		}
+		return count;
 	}
 	
 	/*
@@ -120,9 +126,13 @@ public class LinkedList {
 		while(curr != trailer){ 
 			flag = curr.toString().contains(trait);
 			curr = curr.next();
-			if(flag) {
-				curr.setPrev(curr.prev().prev());
-				curr.prev().setNext(curr);
+			if(size()>1) {
+				if(flag) {
+					curr.setPrev(curr.prev().prev());
+					curr.prev().setNext(curr);
+				}
+			}else {
+				break;
 			}
 		} //walking process and test if find the same traits
 		
@@ -134,9 +144,13 @@ public class LinkedList {
 		while(curr != trailer){ 
 			flag = curr.toString().contains(trait);
 			curr = curr.next();
-			if(!flag) {
-				curr.setPrev(curr.prev().prev());
-				curr.prev().setNext(curr);
+			if(size()>1) {
+				if(!flag) {
+					curr.setPrev(curr.prev().prev());
+					curr.prev().setNext(curr);
+				}
+			} else {
+				break;
 			}
 		} //walking process and test if find the same traits
 	}
