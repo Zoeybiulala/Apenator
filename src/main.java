@@ -23,7 +23,6 @@ public class main {
 		    	myEntries.add(rowInfo);
 		    }
 			reader.close();
-			System.out.println(myEntries.size());
 				
 		    for(String[] row: myEntries) {
 		    	Primate primate = new Primate(row);
@@ -42,13 +41,13 @@ public class main {
 		    	System.out.println(askRanQ(primates,queOrder[i]));
 		    	trait = returnTrait(primates,traitOrder[i]);
 		    	System.out.println("Press 1 for yes, 2 for no");
-		    	//TODO:answer and Deduplicate
+		    	
 		    	positive = answer(input);
 		    	if(positive) {
-		    		primates.delYes(trait);
+		    		primates.delYes(trait,traitOrder[i]);
 		    		
 		    	} else {
-		    		primates.delNo(trait); 
+		    		primates.delNo(trait,traitOrder[i]); 
 		    		
 		    	}
 		    	System.out.println(primates.size());
@@ -58,6 +57,9 @@ public class main {
 		    	}
 		    }
 		    
+		    System.out.println("This primate is most likely the answer:");
+		    System.out.println(primates.toString2());
+		    
 			    
 		    
 	}
@@ -66,7 +68,8 @@ public class main {
 	public static void openQ(Scanner input, LinkedList primates) {
 		System.out.println("Hello, I'm Apenator, or you can call me Api!");
 		System.out.println("Would you like to see how many primates I know? "
-				+ "Press 1 to list all the name of primates in the database,"
+				+ "\n"+
+				"Press 1 to list all the name of primates in the database,"
 				+ "or press 2 to list all the information of primates in the database.");
 		int answer = Integer.parseInt(input.nextLine());
 		if(answer == 1) {
@@ -78,7 +81,7 @@ public class main {
 		}
 		
 		System.out.println("Now, think of 1 primate and I will guess what's on your mind!!");
-		
+		String space = input.nextLine();
 	}
 	
 	

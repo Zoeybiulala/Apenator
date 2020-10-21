@@ -120,32 +120,78 @@ public class LinkedList {
 		size++;//update the size of the list
 	}
 	
-	public void delNo(String trait) {
+	private boolean compare(Node curr,int i,String trait) {
+		String tTrait = "";
+		switch (i) {
+		case 0:
+			tTrait = String.valueOf(curr.getData().isPostOrbClo());
+			break;
+		case 1:
+			tTrait = curr.getData().getEcto();
+			break;
+		case 2:
+			tTrait = String.valueOf(curr.getData().getDenFormu());
+			break;
+		case 3:
+			tTrait = curr.getData().getActTime();
+			break;
+		case 4:
+			tTrait = curr.getData().getDiet();
+			break;
+		case 5:
+			tTrait = curr.getData().getLocation();
+			break;
+		case 6:
+			tTrait = curr.getData().getColor();
+			break;
+		case 7:
+			tTrait = curr.getData().getLoco();
+			break;
+		case 8:
+			tTrait = curr.getData().getNostril();
+			break;
+		case 9:
+			tTrait = String.valueOf(curr.getData().isTail());
+			break;
+		case 10:
+			tTrait = String.valueOf(curr.getData().isDenCom());
+			break;
+		case 11:
+			tTrait = String.valueOf(curr.getData().isGroClaw());
+			break;
+		case 12:
+			tTrait = String.valueOf(curr.getData().isSexualDimor());
+			break;
+		}
+		return trait.equals(tTrait);
+	}
+	
+	public void delNo(String trait,int i) {
 		Node curr = header.next();
 		boolean flag = false;
 		while(curr != trailer){ 
-			flag = curr.toString().contains(trait);
+			flag = compare(curr,i,trait);
 			curr = curr.next();
 			if(size()>1) {
-				if(flag) {
+				if(flag == true) {
 					curr.setPrev(curr.prev().prev());
 					curr.prev().setNext(curr);
 				}
-			}else {
+			} else {
 				break;
 			}
 		} //walking process and test if find the same traits
 		
 	}
 	
-	public void delYes(String trait) {
+	public void delYes(String trait,int i) {
 		Node curr = header.next();
 		boolean flag = true;
 		while(curr != trailer){ 
-			flag = curr.toString().contains(trait);
+			flag = compare(curr,i,trait);
 			curr = curr.next();
 			if(size()>1) {
-				if(!flag) {
+				if(flag==false) {
 					curr.setPrev(curr.prev().prev());
 					curr.prev().setNext(curr);
 				}
