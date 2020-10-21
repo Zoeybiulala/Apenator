@@ -10,7 +10,7 @@ Howler Monkey,NWM,medium,1,ring,2133,diurnal,folivorous,Central and South Americ
 Orangutan,OWM,medium-large,1,tube,2123,diurnal,frugivorous,SE Asia,orange,brachiator/arboreal,down,0,0,0,1,None
 Gorilla,OWM,large,1,tube,2123,diurnal,hebivorous,Africa,vary,knucke-walking/quadrupedal,down,0,0,0,1,None
 Chimpanzee,OWM,medium-large,1,tube,2123,diurnal,omnivorous,Africa,black,arboreal and terrestrial/quadrupedally and brachiator,down,0,0,0,1,humans' the closest loving relative
-Human,OWM,large,1,tube,2123,cathemeral,omnivorous,various,vary,bipedal/terrestrial,down,0,0,0,1,None
+Human,Catarrhine,large,1,tube,2123,cathemeral,omnivorous,various,vary,bipedal/terrestrial,down,0,0,0,1,None
 Bonobo,OWM,medium-large,1,tube,2123,diurnal,omnivorous,Africa,black,knucke-walking/quadrupedal,down,0,0,0,1,None
 Gibbon,OWM,medium,1,tube,2123,diurnal,frugivorous,SE Asia,vary,brachiator/arboreal,down,0,0,0,1,None
 Gelada,OWM,medium-large,1,tube,2123,diurnal,graminivorous,Africa,brown,quadrupedal/terrestrial,down,1,0,0,1,None
