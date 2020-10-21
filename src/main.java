@@ -50,8 +50,6 @@ public class main {
 		    		primates.delNo(trait,traitOrder[i]); 
 		    		
 		    	}
-		    	System.out.println(primates.size());
-	    		System.out.println(primates.toString());
 		    	if(primates.size()==1) {
 		    		break;
 		    	}
