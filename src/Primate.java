@@ -1,22 +1,34 @@
-
+/*
+ * Name: Yitian Cao
+ * File: Primate.java
+ * Desc:
+ * 
+ * This is a primate class for LinkedList file, containing all the traits of
+ * one primate, i.e. the colomns in the cvs file.
+ * Each instance has a getter and a setter, which will be used in
+ * Main.java and LinkedList.java to fetch information as well as
+ * compare information.
+ * 
+ */
 public class Primate {
-	private String name;
-	private String category;
-	private String bodySize;
-	private boolean postOrbClo;
-	private String ecto;
-	private int denFormu;
-	private String actTime;
-	private String diet;
-	private String location;
-	private String color;
-	private String loco;
-	private String nostril;
-	private boolean tail;
-	private boolean denCom;
-	private boolean groClaw;
-	private boolean sexualDimor;
-	private String spFeat; 
+	private String name; //name of the primate
+	private String category; //Strepsirrine/Haplorrine/NWM/OWM..
+	private String bodySize; //body size, which I subjectively decided
+	private boolean postOrbClo; //the existance of post-orbital closure
+	private String ecto; //the shape of Ectotympanic area
+	private int denFormu; //dental formula
+	private String actTime; //active time : diurnal or nocturnal..
+	private String diet; //primate's diet: carnivorous/folivorous..
+	private String location; //the majority of that primate lives in
+	private String color; //the majority of that primate colored in
+	private String loco; //locomotion: brachiator/arboreal/quadrupedal..
+	private String nostril;//is nostril sideway facing or downward facing
+	private boolean tail; //the existance of tail
+	private boolean denCom; //the existance of dental comb
+	private boolean groClaw; //the existance of Grooming Claw
+	private boolean sexualDimor; //the existance of sexual dimorphism
+	private String spFeat; // an extra input incase two primates have
+							// the exact same traits as above
 	
 	/**
 	 * @param name

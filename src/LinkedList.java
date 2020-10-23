@@ -1,13 +1,16 @@
-import java.util.ArrayList;
 /*
- * Name: Yitian Cao(Zoey)
+ * Name: Yitian Cao
  * File: LinkedList.java
  * Desc:
  * 
  * This is class can create a doublyLinkedList implementing the Node class.
  * It can create an alphabeticallyy ordered list and have functions of printing
- * primate in alphabetical order and so on
+ * primate in alphabetical order. Also, it can delete the node if that
+ * primate doesn't match the critiria of the user's input
  */
+
+import java.util.ArrayList;
+
 public class LinkedList {
 	
 	private Node header;
@@ -39,6 +42,8 @@ public class LinkedList {
 
 	/*	
 	 * @returns the number of elements in the linked list.
+	 * in real time
+	 * requires walking the whole list
 	 */
 	public int size() { 
 		Node curr = header.next();
@@ -120,6 +125,12 @@ public class LinkedList {
 		size++;//update the size of the list
 	}
 	
+	/*
+	 * @param curr is the current comparing node
+	 * @param int i is the order of the list of traits
+	 * @param trait will be the trait that we will be comparing
+	 * @return boolean 
+	 */
 	private boolean compare(Node curr,int i,String trait) {
 		String tTrait = "";
 		switch (i) {
@@ -166,13 +177,20 @@ public class LinkedList {
 		return trait.equals(tTrait);
 	}
 	
+	/*
+	 * @param trait, the trait we will compare with our database
+	 * @param i, the order of the trait
+	 * this method will delte the primates that DO match the trait
+	 * prompt to the user, because user chooses the no side of the
+	 * primate
+	 */
 	public void delNo(String trait,int i) {
 		Node curr = header.next();
 		boolean flag = false;
 		while(curr != trailer){ 
 			flag = compare(curr,i,trait);
 			curr = curr.next();
-			if(size()>1) {
+			if(size()>1) {//if only one, just list the final answer
 				if(flag == true) {
 					curr.setPrev(curr.prev().prev());
 					curr.prev().setNext(curr);
@@ -184,6 +202,13 @@ public class LinkedList {
 		
 	}
 	
+	/*
+	 * @param trait, the trait we will compare with our database
+	 * @param i, the order of the trait
+	 * this method will delte the primates that DON'T match the trait
+	 * prompt to the user, because user chooses the yes side of the
+	 * primate
+	 */
 	public void delYes(String trait,int i) {
 		Node curr = header.next();
 		boolean flag = true;
@@ -254,8 +279,4 @@ public class LinkedList {
 		return s;
 	}
 	
-	
-	
-	
-
 }
