@@ -7,7 +7,7 @@ Capuchin,NWM,medium,1,ring,2133,diurnal,omnivorous,Central and South America,bla
 Uakari,NWM,medium-large,1,ring,2133,diurnal,frugivorous,Amazon River,bloned-red,brachiator/arboreal,sideway,1,0,0,1,have red face
 Tamarins,NWM,small,1,ring,2133,diurnal,omnivorous,Central and South America,black-white,leaper/arboreal,sideway,1,0,0,0,is polyyandrous
 Howler Monkey,NWM,medium,1,ring,2133,diurnal,folivorous,Central and South America,vary,brachiator/arboreal,sideway,1,0,0,0,howler
-Orangutan,Apes,medium-large,1,tube,2123,diurnal,frugivorous,SE Asia,orange,brachiator/arboreal,down,0,0,0,1,None
+Orangutan,Great Apes,medium-large,1,tube,2123,diurnal,frugivorous,SE Asia,orange,brachiator/arboreal,down,0,0,0,1,None
 Gorilla,Great Apes,large,1,tube,2123,diurnal,hebivorous,Africa,vary,knucke-walking/quadrupedal,down,0,0,0,1,None
 Chimpanzee,Great Apes,medium-large,1,tube,2123,diurnal,omnivorous,Africa,black,arboreal and terrestrial/quadrupedally and brachiator,down,0,0,0,1,humans' the closest loving relative
 Human,Great Apes,large,1,tube,2123,cathemeral,omnivorous,various,vary,bipedal/terrestrial,down,0,0,0,1,None
